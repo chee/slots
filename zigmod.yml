@@ -1,0 +1,6 @@
+id: aax8u6v345c1tuwgy031ywo0jskh7m8t5810bj8yic6lon9j
+name: slots
+license: GPL-3.0
+description: slot machine
+root_dependencies:
+  - src: git https://github.com/jecolon/zigstr
