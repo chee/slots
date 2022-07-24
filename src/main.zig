@@ -61,11 +61,17 @@ pub fn main() !void {
     const three = random_fruit();
     _ = print_fruit(one, two, three);
     _ = print("\n");
+
     if (one == two and two == three) {
         _ = print("\u{001b}[5;3;1;2m✨ WINNER !! ✨\n");
+        std.process.exit(0);
     } else if (one == two or two == three or one == three) {
         _ = print("\u{001b}[5;3;1;2;m yay 🪙\n");
+        std.process.exit(0);
     }
+
+    // c/o jakechampion, fail if there is no win
+    std.process.exit(7);
 }
 
 test "basic test" {
