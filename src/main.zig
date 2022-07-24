@@ -73,7 +73,3 @@ pub fn main() !void {
     // c/o jakechampion, fail if there is no win
     std.process.exit(7);
 }
-
-test "basic test" {
-    try std.testing.expectEqual(10, 3 + 7);
-}
