@@ -3,4 +3,3 @@ name: slots
 license: GPL-3.0
 description: slot machine
 root_dependencies:
-  - src: git https://github.com/jecolon/zigstr
