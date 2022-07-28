@@ -1,5 +1,5 @@
 const std = @import("std");
-const fruit: [6][]const u8 = .{ "🍒", "🍑", "🍐", "7️⃣", "🍇", "🍋" };
+const fruit: [6][]const u8 = .{ "🍒", "🍑", "🍐", "\u{001b}[2m7", "🍇", "🍋" };
 const slotfmt = "┣ {s} {s} {s} ┫";
 const machine_len = "┣    ┫".len;
 const stderr = std.io.getStdErr();
@@ -17,7 +17,7 @@ fn write(buf: []u8, comptime fmt: []const u8, args: anytype) void {
 }
 
 fn clear(chars: usize) void {
-    const len: usize = if (chars > 9) 9 else 8;
+    const len: usize = if (chars > 9) 5 else 6;
     write(buffer[0..len], "\x1b[{d}D", .{chars + 1});
     _ = print(buffer[0..len]);
     _ = print("\x1b[0K");
